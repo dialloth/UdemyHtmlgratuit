@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* header*/
+html, 
+body {
+    font-family:"poppins";
+}
+section.header {
+    position: relative;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner {
+    z-index: 2;
+}
+section.header h1 {
+    font-size: 13em;
+    position: relative;
+    top: -50px;
+    color: white;
+    z-index: 1;
+}
+section.header::before {
+    content: "";
+    position: absolute;
+    background-image: url(img/ciel.png)!important;
+    height: 100%;
+    width: 100%;
+    background-position: bottom;
+    
+}
+section.header::after {
+    content: "";
+    position: absolute;
+    background-image: url(img/montagne.png)!important;
+    height: 100%;
+    width: 100%;
+    background-position: bottom;
+    z-index: 1;
+}
+    /* middle*/
+
+    section.mid {
+        padding: 100px 0;
+        background-color: #1e2324;
+    }
+    section.mid .titre h1 {
+        position: relative;
+        text-align: center;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 75px;
+    }
+
+    section.mid .titre  h1::before {
+        content: "";
+        position: absolute;
+        width: 105px;
+        height: 5px;
+        background-color:  #d3baa3;
+        left: 46%;
+        top : 115%;
+        transform: (-50%, -50%);
+    }
+    
+    section.mid .content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-evenly;
+    }
+    section.mid .card {
+        background-color: grey;
+        max-width: 600px;
+        padding: 25px;
+        transition: 0.3s;
+        color: white;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+    }
+    section.mid .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    section.mid .title h1 {
+        margin-left: 15px ;  
+        font-size: 2em; 
+        transition: 0.3s;
+    }
+    section.mid .title img {
+        max-width: 50px;   
+    }
+    section.mid .card:hover {
+        box-shadow: 0px 0px 10px #d3baa3;
+        background-color: brown;
+    }
+    section.mid .card:hover h1 {
+        color: #d3baa3;
+    }
+
+    /*  FOOTER */
+    section.footer {
+        height: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 10px #d3baa3;
+    }
+    section.footer::before {
+        content: "";
+        position: absolute;
+        background-image: url(img/man.png)!important;
+        height: 100%;
+        width: 100%;
+        z-index: -1; 
+    }
+    .footer .titre h1 {
+        color: white;
+        font-size: 3em;
+        text-align: center;
+    }
+    @media (max-width: 1400px){
+        section.header h1 {
+            font-size: 5em;;
+        }
+    }
+
+    @media (max-width: 900px){
+        section.header h1 {
+            font-size: 5em;;
+        }
+    }
